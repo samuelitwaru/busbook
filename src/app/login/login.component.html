@@ -1,0 +1,43 @@
+<div class='container'>
+	<form (submit)='login($event)'>
+		<div class='row'>
+
+			<div class='col-lg-3 col-md-2'>
+			</div>
+
+			<div class='card col-lg-6 col-md-8 my-3'>
+				<h2 class='text-center my-2 text-secondary' >Login</h2>
+
+				<div class='text-center'>
+					<label class='text-secondary'>BUS COMPANY ID</label>
+					<input class='form-control text-center' />
+				</div>
+
+				<div class='card my-2'>
+					<div class="card-body">
+						<div class='my-2'>
+							<label class='text-secondary'>CASHIER USERNAME</label>
+							<input class='form-control form-control-sm'/>
+						</div>
+
+						<div class='my-2'>
+							<label class='text-secondary'>CASHIER PASSWORD</label>
+							<input type='password' class='form-control form-control-sm'/>
+						</div>
+
+						<div class='my-3'>
+							<button type='submit' class='btn btn-lg btn-info btn-block'>login</button>	
+						</div>
+
+						<label class="pull-right d-block text-center">
+							<a routerLink='/'>Forgotten Password?</a>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class='col-lg-3 clo-md-2'>
+			</div>
+		</div>
+	</form>
+</div>

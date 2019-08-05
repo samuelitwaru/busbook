@@ -1,0 +1,150 @@
+<div class='container'>
+
+	<div class='row mt-2'>
+		<div class='col-lg-5'>
+			<div class="card h-100">
+				<div class="card-header font-weight-bold text-center">
+					Company	Details
+				</div>
+
+				<div class="card-body">
+					<div class='row'>
+						<div class='col-lg-4 my-auto font-weight-bold'>
+							Name
+						</div>
+
+						<div class='col-lg-8'>
+							<input type='text' class="form-control form-control-md" placeholder="Name of Company"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='col-lg-7'>
+			<div class="card row pb-2">
+				<div class="card-header font-weight-bold text-center">
+					<div class='row'>
+						<div class='col-lg-12'>Gallary (Logo & Bus)</div>
+					</div>
+				</div>
+
+				<div class="card-body">
+					<div class='row'>
+						<div class='col-lg-6 mt-1'>
+							<div class="custom-file" id="customFile" lang="es">
+								<input type="file" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp" onchange="readURL(this, '#logo', '#logo-label', 'Company logo');">
+								<label id='logo-label' class="custom-file-label" for="exampleInputFile">
+								Attach Logo
+								</label>
+							</div>
+
+							<div class='mt-2'>
+								<img id='logo' width='150' height='150' class='img-thumbnail' src="static/img/logo.png">
+							</div>
+						</div>
+
+
+						<div class='col-lg-6 mt-1'>
+							<div class="custom-file" id="customFile" lang="es">
+								<input type="file" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp" onchange="readURL(this, '#bus','#bus-label', 'Bus image');">
+								<label id='bus-label' class="custom-file-label" for="exampleInputFile">
+								Attach Bus Image
+								</label>
+							</div>
+
+							<div class='mt-2'>
+								<img id='bus' width='150' height='150' class='img-thumbnail' src="static/img/logo.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class='row mt-2'>
+		<div class='col-lg-12'>
+			<div class="card w-100">
+				<div class="card-header font-weight-bold">
+					<div class='row'>
+						<div class='col-lg-9'>Company Journeys</div>
+						
+						<div class='col-lg-3'>
+							<button type='button' class='btn btn-sm btn-block btn-info' data-toggle="modal" data-target="#newJourney">Add +</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body">
+					<div class="card bg-light mb-3">
+						<div class="text-dark card-header">
+							<!-- <div class='row'>
+								<div class='col-lg-12 font-weight-bold'>Major Journey</div>
+							</div>
+							<hr class='bg-light'> -->
+							<div class='row text-center	'>
+								<div class='col-lg-1 my-auto'>From</div>
+
+								<div class='col-lg-3 font-weight-bold my-1'><input class='form-control form-control-md' placeholder="Start" /></div>
+
+								<div class='col-lg-1 my-auto'>To</div>
+
+								<div class='col-lg-3 font-weight-bold my-1'><input class='form-control form-control-md' placeholder="Destination" /></div>
+
+								<div class='col-lg-2 font-weight-bold my-1'><input class='form-control form-control-md' placeholder="Fare" /></div>	
+
+								<div class='col-lg-2 mt-1'>
+									<button type='button' class='btn btn-danger'>Remove</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-body bg-white">	
+							<div class='row'>
+								<div class='col-lg-12'>
+									<table class="table">
+										<!-- <thead class="thead-light">
+											<tr>
+											<th scope="col">Arua</th>
+											<th scope="col">Stop Point</th>
+											<th scope="col">Fare</th>
+											<th scope="col"></th>
+											</tr>
+										</thead> -->
+										<tbody>
+											<tr>
+												<th scope="row">Arua To</th>
+												<td ><input type="text" class='form-control form-control-sm' placeholder="Stop Point" /></td>
+												<td><input type="text" class='form-control 	form-control-sm' placeholder="Fare" /></td>
+												<td>
+													<button type="button" class="close text-danger">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</td>
+											</tr>
+
+											<tr>
+												<th scope="row"></th>
+												<td ></td>
+												<td>
+													<button type='button' class='btn btn-primary btn-md float-right'> + </button>
+												</td>
+												<td></td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<button type="submit" class='btn btn-success btn-md w-100 float-right my-2'>
+		Submit and Register
+	</button>
+</div>
