@@ -15,6 +15,7 @@ import { ManagerComponent } from './manager/manager.component';
 import { environment } from '../environments/environment';
 
 import {AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {AngularFireModule} from '@angular/fire';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, 'busbook'),
+    AngularFirestoreModule,
     RouterModule.forRoot([
       {path:'register', component:RegisterComponent},
       {path:'login', component:LoginComponent},
