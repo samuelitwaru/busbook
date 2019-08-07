@@ -12,6 +12,9 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ManagerComponent } from './manager/manager.component';
+import { environment } from '../environments/environment';
+
+import {AngularFireModule} from '@angular/fire';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,12 @@ import { ManagerComponent } from './manager/manager.component';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    ManagerComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
       {path:'register', component:RegisterComponent},
       {path:'login', component:LoginComponent},
