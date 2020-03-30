@@ -1,0 +1,33 @@
+<div class="main">
+    <div id="bus-structure">
+        <h3>{{bus.number + " (" + bus.type + ")"}}</h3>
+        <mat-grid-list cols="{{currentStructure.cols}}" rowHeight="30">
+            <mat-grid-tile *ngFor="let col of currentStructure.structure">
+                <button *ngIf="col.state == 'available'" mat-raised-button (click)="reserveOrUnreserveSeat(col)">{{col.number}}</button>
+                <button *ngIf="col.state == 'reserved'" class="reserved" mat-raised-button (click)="reserveOrUnreserveSeat(col)">{{col.number}}</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div id="bus-schedule-form">
+        <form [formGroup]="addBusForm" (ngSubmit)="addBus()">
+            <h3>New Bus</h3>
+            Bus Number
+            <input [(ngModel)]="bus.number" type="text" formControlName="bus_number" placeholder="bus number" />
+            <hr>
+            Seating Plan:
+            <select formControlName="structure" (change)="changeStructure($event)">
+                <option *ngFor="let structure of structureNames">
+                    {{structure}}
+                </option>
+            </select>
+            <hr>
+            Bus Type:
+            <div>
+                <input [(ngModel)]="bus.type" id='ordinary' type="radio" value="Ordinary" formControlName="bus_type" name="bus_type" /><label for='ordinary'>Ordinary</label>
+                <input [(ngModel)]="bus.type" id='luxury' type="radio" value="Luxury" formControlName="bus_type" name="bus_type" /><label for='luxury'>Luxury</label>
+            </div>
+            <button>add</button>
+        </form>
+    </div>
+</div>

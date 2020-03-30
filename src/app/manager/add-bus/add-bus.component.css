@@ -1,0 +1,46 @@
+#bus-structure {
+    max-width: 256px;
+    border: 3px solid rgb(14, 15, 24);
+    padding: 1vh;
+}
+
+.reserved {
+    background-color: #fff;
+    color: #000;
+    text-decoration-line: line-through;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    padding-left:1vw;
+}
+
+#bus-schedule-form {
+    flex: 2;
+}
+
+#bus-structure{
+    flex: 1;
+}
+
+#bus-schedule-form > form{
+    display: flex;
+    flex-direction: column;
+    flex:2;
+    height: 150px;
+    padding: 2vh;
+}
+    #bus-schedule-form > form > *{
+        flex: 1;
+        margin-top: 1vh;
+    }
+    #bus-schedule-form > form > input, #bus-schedule-form > form > button, #bus-schedule-form > form > select{
+        padding: 2vh;
+    }
+    #bus-schedule-form > form > div{
+        display: flex;
+    }
+        #bus-schedule-form > form > div > input{
+            display: flex;
+        }
